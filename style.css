@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1440px;
+    font-family: 'League Spartan';
+}
+
+header {
+    position: absolute;
+    width: 390px;
+    margin-left: 51px;
+    margin-top: 51px;
+    display: flex;
+}
+
+header img {
+    width: 80px;
+    margin-right: 50px;
+}
+
+.redirectButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.redirectButtons a {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.redirectButtons a::after {
+    content: "";
+    position: absolute;
+    bottom: -11px; /* Descend de 11 pixels sous le lien */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.redirectButtons a:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scaleX(2);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerOne {
+    display: flex;
+    flex-direction: row;
+}
+
+.topLeft img {
+    height: 100%;
+}
+
+.topRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contentTopRight {
+    display: flex;
+    flex-direction: column;
+    width: 430px;
+    height: 273px;
+    justify-content: center;
+}
+
+.contentTopRight h2 {
+    font-size: 45px;
+    margin-bottom: 24px;
+}
+
+.contentTopRight p {
+    color: hsl(0, 0%, 63%);
+    line-height: 1.4;
+    margin-bottom: 24px;
+}
+
+.shopNowDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+}
+
+.shopNowDiv button {
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    color: hsl(0, 0%, 63%);
+    text-transform: uppercase;
+    letter-spacing: 0.8em;
+    cursor: pointer;
+}
+
+.containerTwo {
+    display: flex;
+    flex-direction: row ;
+}
+
+.middleBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middleBottomContent {
+    width: 87%;
+    height: 50%;
+}
+
+.middleBottomContent h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    margin-bottom: 10px;
+}
+
+.middleBottomContent p {
+    line-height: 1.2;
+    color: hsl(0, 0%, 63%);
+
+}
