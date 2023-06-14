@@ -1,9 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
     box-sizing: border-box;
     max-width: 1440px;
     font-family: 'League Spartan';
@@ -11,10 +8,17 @@
 
 header {
     position: absolute;
-    width: 390px;
     margin-left: 51px;
     margin-top: 51px;
     display: flex;
+}
+
+header label {
+    display: none;
+}
+
+header input {
+    display: none;
 }
 
 header img {
@@ -25,7 +29,7 @@ header img {
 .redirectButtons {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 260px;
 }
 
 .redirectButtons a {
@@ -60,24 +64,29 @@ body {
 .containerOne {
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+.topLeft {
+    width: 100%;
 }
 
 .topLeft img {
     height: 100%;
+    width: 100%;
 }
 
 .topRight {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .contentTopRight {
     display: flex;
     flex-direction: column;
-    width: 430px;
-    height: 273px;
+    width: 65%;
     justify-content: center;
 }
 
@@ -117,7 +126,8 @@ body {
 
 .containerTwo {
     display: flex;
-    flex-direction: row ;
+    flex-direction: row;
+    transform: translateY(-4px);
 }
 
 .middleBottom {
@@ -140,8 +150,95 @@ body {
 .middleBottomContent p {
     line-height: 1.2;
     color: hsl(0, 0%, 63%);
-
 }
 
+.leftBottom {
+    width: 100%;
+}
+
+.leftBottom img {
+    width: 100%;
+}
+
+.rightBottom {
+    width: 100%;
+}
+
+.rightBottom img {
+    width: 100%;
+}
+
+.attribution {
+    bottom: 0;
+}
 
 /* RESPONSIVE */
+
+@media (max-width: 1024px){
+    .containerOne {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .containerTwo {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .topRight {
+        transform: translateY(-4px);
+        padding-top: 60px;
+        padding-bottom: 74px;
+    }
+
+    .middleBottom {
+        padding-top: 53px;
+        padding-bottom: 44px;
+    }
+
+    .middleBottomContent {
+        width: 65%;
+    }
+
+    .redirectButtons {
+        display: none;
+    }
+
+    header {
+        margin-left: 0;
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        padding-top: 47px;
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    header img {
+        width: 125px; 
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    header input {
+        display: flex;
+        position: absolute;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    header label {
+        position: absolute;
+        display: flex;
+        margin-left: 5%;
+    }
+
+    #labelHeader svg {
+        width: 42px;
+        height: 30px;
+    }
+
+    #headerOpen:checked + #labelHeader + .redirectButtons {
+        display: flex;
+    }
+}
