@@ -41,7 +41,7 @@ header img {
 .redirectButtons a::after {
     content: "";
     position: absolute;
-    bottom: -11px; /* Descend de 11 pixels sous le lien */
+    bottom: -11px;
     left: 50%;
     transform: translateX(-50%);
     width: 50%;
